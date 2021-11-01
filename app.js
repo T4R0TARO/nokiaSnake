@@ -22,7 +22,7 @@ function startGame() {
     squares[appleIndex].classList.remove('apple')
     clearInterval(interval)
     score = 0;
-    // randomApple()
+    randomApple() // call function to generate random apple 
     direction = 1
     scoreDisplay.innerText = score
     intervalTime = 1000
@@ -73,16 +73,6 @@ function randomApple() {
     squares[appleIndex].classList.add('apple')
 }
 
-// assign functions to keycodes
-
-
-
-
-
-
-
-
-
 
     //assign functions to keycodes
     function control(e) {
@@ -100,6 +90,6 @@ function randomApple() {
     }
 
     document.addEventListener('keyup', control)
-
+    startBtn.addEventListener('click', startGame)
 
 })
